@@ -1,4 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
-  padding: 2rem;
-  display: flex;
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #efefef;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+button {
+  background: none;
+  position: relative;
+  width: 240px;
+  height: 80px;
+  border: 1px solid #338033;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: 0.6s;
+  overflow: hidden;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transform: translateX(-100px) X(-15deg);
+}
+
+button:hover {
+  background: #338033;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+
+button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
 }
